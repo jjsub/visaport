@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('visaPort')
-  .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
+  .controller('TravelCtrl', ['$scope', '$interval', 'Travel', function($scope, $interval, Home){
     Home.getMessage().then(function(response){
       $scope.mean = response.data.mean;
 

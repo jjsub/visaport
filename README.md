@@ -4,8 +4,8 @@ build status icon
 coverage status icon
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
+![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/ete/master/docs/screenshots/one.jpg)
+![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/ete/master/docs/screenshots/two.jpg)
 
 ### Description
 write a description about your project
@@ -40,7 +40,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Chyld Merd](htt://yld)
 
 ### License
 [MIT](LICENSE)
