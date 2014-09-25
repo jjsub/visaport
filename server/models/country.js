@@ -13,8 +13,13 @@ Object.defineProperty(Country, 'collection', {
 
 Country.findByName = function(country, cb){
   Country.collection.findOne({Country:country}, cb);
-
 };
+
+
+Country.all = function(cb){
+  Country.collection.find().toArray(cb);
+};
+
 
 module.exports = Country;
 

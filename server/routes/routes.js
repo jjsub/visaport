@@ -29,6 +29,7 @@ module.exports = function(app, express){
   app.use(security.bounce);
   app.delete('/logout', users.logout);
   app.post('/getcountry', country.getCountry);
+  app.get('/allCountry', country.allCountry);
   console.log('Express: Routes Loaded');
 };
 

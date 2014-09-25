@@ -8,6 +8,11 @@
         $scope.country = response.data;
       });
     };
+
+    Travel.allCountry().then(function(response){
+     debugger;
+     $scope.allCountry = response.data.Country;
+    });
   }]);
 })();
 

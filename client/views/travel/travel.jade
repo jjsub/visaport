@@ -1,6 +1,11 @@
 h1 travel
 
 .row
+  <angucomplete id='countryFinder' placerholder='searchCountry' pause='100' selectedObject='country' localdata='allCountry' searchfields='Country' titlefield='Country' minlength='1' />
+
+
+
+.row
   .col-xs-3
     form(role='form', novalidate, name='countryForm')
       .form-group
@@ -11,4 +16,6 @@ h1 travel
 
    pre {{country | json}}
 
+span(ng-repeat='c in allCountry') {{c.Country}}
 
+{{}}

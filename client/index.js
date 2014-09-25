@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('visaPort', ['ngRoute', 'LocalForageModule', 'angular-loading-bar'])
+  angular.module('visaPort', ['ngRoute', 'LocalForageModule', 'angular-loading-bar', 'angucomplete'])
   .config(['$routeProvider', '$httpProvider', '$localForageProvider', function($routeProvider, $httpProvider, $localForageProvider){
     $routeProvider
     .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})

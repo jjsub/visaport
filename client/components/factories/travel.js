@@ -8,8 +8,11 @@
     function findCountry(countryTo){
       return $http.post('/getcountry', {countryTo:countryTo});
     }
+    function allCountry(){
+      return $http.get('/allCountry');
+    }
 
-    return {findCountry:findCountry};
+    return {findCountry:findCountry, allCountry:allCountry};
   }]);
 })();
 
