@@ -1,0 +1,14 @@
+h1 travel
+
+.row
+  .col-xs-3
+    form(role='form', novalidate, name='countryForm')
+      .form-group
+        label(for='travelTo') Travel to:
+        input.form-control#travelTo(type='text', name='travelTo', ng-model='countryTo', autofocus, required)
+      button.btn.btn-primary(ng-show='countryForm.$valid', ng-click='findCountry()') Go!
+  .col-xs-9
+
+   pre {{country | json}}
+
+

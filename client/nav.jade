@@ -2,11 +2,11 @@
   .container
     .navbar-header
       button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
-        span.sr-only Toggle navigation
+        span.sr-only VisaPort
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') MEAN Template
+      a.navbar-brand(href='/') VisaPort
 
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right(ng-hide='email')
@@ -15,5 +15,6 @@
         li: a(href='/#/login') Login
       ul.nav.navbar-nav.navbar-right(ng-show='email')
         li: a(href='/#/') Home
+        li: a(href='/#/travel') Travel
         li: a(href='/#/logout') {{email}}
 
