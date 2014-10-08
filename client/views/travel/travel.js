@@ -12,13 +12,16 @@
   }])
   .controller('TravelCtrl', ['$scope', '$interval', 'Travel','$http', 'Weather', function($scope, $interval, Travel, $http, Weather){
 
-    $scope.findCountry = function(){
+   /* $scope.findCountry = function(){
       Weather.getConditions($scope.countryTo).then(function(response){
+        console.log(response);
         $scope.temperature = response.data.current_observation.temp_f;
-        $scope.icon = response.data.current_observation.icon_url;
-      });
+        $scope.icon  = response.data.current_observation.icon_url;
+      });*/
 
-      Travel.findCountry($scope.countryTo).then(function(response){
+   $scope.findCountry = function(){
+      Travel.findCountry($scope.countryTo, $scope.countryFrom).then(function(response){
+        $scope.countryOne = response.data;
         console.log(response.data);
       });
     };

@@ -11,15 +11,13 @@ Object.defineProperty(Country, 'collection', {
 });
 
 
-Country.findByName = function(country, cb){
-  Country.collection.findOne({Country:country}, cb);
-};
-
-
 Country.all = function(cb){
   Country.collection.find().toArray(cb);
 };
 
+Country.findByName = function(query, cb){
+  global.mongodb.collection(query.countryFrom).findOne({Country: query.countryTo}, cb);
+};
 
 module.exports = Country;
 
