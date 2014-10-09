@@ -11,8 +11,8 @@ Object.defineProperty(Country, 'collection', {
 });
 
 
-Country.all = function(cb){
-  Country.collection.find().toArray(cb);
+Country.all = function(country, cb){
+  global.mongodb.collection(country).find().toArray(cb);
 };
 
 Country.findByName = function(query, cb){

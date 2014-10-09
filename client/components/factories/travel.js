@@ -8,8 +8,8 @@
     function findCountry(countryTo, countryFrom){
       return $http.post('/getcountry', {countryTo:countryTo, countryFrom:countryFrom});
     }
-    function allCountry(){
-      return $http.get('/allCountry');
+    function allCountry(collection){
+      return $http.get('/allCountry/'+ collection);
     }
 
     return {findCountry:findCountry, allCountry:allCountry};

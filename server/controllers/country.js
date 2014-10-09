@@ -10,7 +10,7 @@ exports.getCountry = function(req, res){
 };
 
 exports.allCountry = function(req, res){
-  Country.all(function(err, country){
+  Country.all(req.params.country, function(err, country){
     if(country){
       res.send({Country:country});
       res.status(200).end();

@@ -7,11 +7,11 @@
     function getConditions(country){
       return $http.jsonp('http://api.wunderground.com/api/f0e6fdcbf9d5f727/conditions/q/' + country + '.json?callback=JSON_CALLBACK');
     }
-
     return {getConditions:getConditions};
   }])
   .controller('TravelCtrl', ['$scope', '$interval', 'Travel','$http', 'Weather', function($scope, $interval, Travel, $http, Weather){
 
+    $scope.hasSearched = false;
    /* $scope.findCountry = function(){
       Weather.getConditions($scope.countryTo).then(function(response){
         console.log(response);
@@ -23,12 +23,20 @@
       Travel.findCountry($scope.countryTo, $scope.countryFrom).then(function(response){
         $scope.countryOne = response.data;
         console.log(response.data);
+        $scope.hasSearched = true;
       });
     };
 
-    Travel.allCountry().then(function(response){
-     $scope.allCountry = response.data.Country;
+   $scope.selectCollection = function(collection){
+     Travel.allCountry(collection).then(function(response){
+       $scope.allCountry = response.data.Country;
+        //console.log(response.data);
     });
+
+   };
+
+   $scope.selectCollection('usavisarequire');
+
  // function geocode(address){
  //   var geocoder = new google.maps.Geocoder();
  //   geocoder.geocode({address:address}, function(results, status){
