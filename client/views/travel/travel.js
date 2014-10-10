@@ -10,8 +10,15 @@
     return {getConditions:getConditions};
   }])
   .controller('TravelCtrl', ['$scope', '$interval', 'Travel','$http', 'Weather', function($scope, $interval, Travel, $http, Weather){
-
+    $scope.country = '';
     $scope.hasSearched = false;
+
+
+     var passportImages = [
+      '../assets/image/passport/UniteState-passport.jpg',
+      '../assets/image/passport/DominicanRep_passport.jpg'
+    ];
+
    /* $scope.findCountry = function(){
       Weather.getConditions($scope.countryTo).then(function(response){
         console.log(response);
@@ -29,13 +36,25 @@
 
    $scope.selectCollection = function(collection){
      Travel.allCountry(collection).then(function(response){
+       $scope.passImage(collection);
        $scope.allCountry = response.data.Country;
         //console.log(response.data);
     });
 
    };
 
-   $scope.selectCollection('usavisarequire');
+   $scope.passImage = function(country){
+    if(country === 'usavisarequire'){
+      $scope.flag  = passportImages[0];
+    }
+    if(country === 'dominicanvisarequire'){
+      $scope.flag  = passportImages[1];
+    }
+   };
+
+   //$scope.selectCollection('usavisarequire');
+
+
 
  // function geocode(address){
  //   var geocoder = new google.maps.Geocoder();
