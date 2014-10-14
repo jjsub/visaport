@@ -15,10 +15,11 @@
     $localForageProvider.config({name:'visaPort', storeName:'cache', version:1.0});
   }]).controller('IndexCtrl', ['$scope', '$interval', 'Travel','$http', 'Weather', function($scope, $interval, Travel, $http, Weather){
     $scope.title = 'hola';
+    $scope.img = '';
     $scope.randomImage = function(){
     var bgImage    = ['./assets/image/SnowTracks_web.jpg', './assets/image/wings-web1.jpg'],
         shuffeled  = _.shuffle(bgImage);
-      return shuffeled[0];
+      $scope.img = shuffeled[0];
     };
     $scope.randomImage();
   }]);
