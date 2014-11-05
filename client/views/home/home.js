@@ -2,13 +2,13 @@
   'use strict';
 
   angular.module('visaPort')
-  .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
+  .controller('HomeCtrl', ['$scope', 'Home', function($scope,Home){
     Home.getMessage().then(function(response){
-      $scope.mean = response.data.mean;
+     // $scope.mean = response.data.mean;
 
-      $interval(function(){
-        $scope.mean = _.shuffle($scope.mean);
-      }, 100);
+      //$interval(function(){
+        //$scope.mean = _.shuffle($scope.mean);
+     // }, 100);
     });
   }]);
 })();

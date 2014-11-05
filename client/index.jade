@@ -12,7 +12,8 @@ html(ng-app='visaPort', lang='en')
     link(href='/vendor/angucomplete/angucomplete.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/components/directives/jj-weather/jj-weather.css', rel='stylesheet')
-   body(ng-controller='IndexCtrl' style='background-image:url({{randomImage()}})')
+    link(href='http://fonts.googleapis.com/css?family=Cedarville+Cursive', rel='stylesheet', type='text/css')
+   body(ng-controller='IndexCtrl' style='background-image:url({{img}})')
     include nav
     .container
       .row
@@ -25,6 +26,7 @@ html(ng-app='visaPort', lang='en')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
     script(src='/vendor/underscore/underscore.js')
     script(src='/vendor/toastr/toastr.js')
+    script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50b326253d80a9bd', async='')
     script(src='/vendor/angucomplete/angucomplete.js')
     script(src='/vendor/localforage/dist/localforage.js')
     script(src='/vendor/angular-loading-bar/build/loading-bar.js')
