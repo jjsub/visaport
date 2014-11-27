@@ -40,7 +40,8 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Merd](htt://yld)
+Juan Job
+
 
 ### License
 [MIT](LICENSE)
